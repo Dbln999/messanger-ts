@@ -1,13 +1,109 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #181616;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+.messageText {
+  color: white;
+}
+.messageEnterContainer {
+  display: flex;
+  position: fixed;
+  bottom: 0%;
+  width: 100%;
+  background-color: #333;
+  height: 60px;
+  justify-content: center;
+  align-items: center;
+}
+.messageEnterContainer > button {
+  background: #008549;
+  border: 0;
+  border-radius: 15px;
+  width: 80px;
+  height: 40px;
+  font-size: 18px;
+  margin-left: 15px;
+  color: white;
+  cursor: pointer;
+  box-shadow: 3px 3px 2px #3f8561;
+}
+
+.messageEnterContainer > button:hover {
+  background: #00ac67;
+}
+
+.messageEnterContainer > button:active {
+  transform: translateY(2px);
+}
+
+.messageInput {
+  height: 35px;
+  width: 90%;
+  border: 1px solid white;
+  border-radius: 10px;
+  background-color: #333;
+  color: white;
+  text-indent: 15px;
+  font-size: 19px;
+}
+
+.messageCont {
+  display: flex;
+  margin-top: 10px;
+  margin-left: 10px;
+}
+.message {
+  background-color: #495057;
+  border-radius: 0 16px 16px 16px;
+  padding: 10px 16px;
+  margin-left: 15px;
+}
+
+.messageAvatar {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+}
+
+.trash {
+  cursor: pointer;
+}
+.interactons {
+  display: flex;
+}
+.pencil {
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.message > .fieldContent {
+  height: 30px;
+  background-color: #495057;
+  border: 0;
+  color: white;
+  font-size: 19px;
+
+}
+
+
+.completed {
+  height: 30px;
+  font-size: 19px;
+  background-color: #495057;
+  border: 0;
+
+  color: #ffc0be;
+}
+.message > .completed:focus{
+  outline: 0;
 }
