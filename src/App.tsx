@@ -30,10 +30,11 @@ function App() {
     setMessages((prev) => prev.filter((mess) => mess.id !== id));
   };
 
-  const editMessage = (title: string, id: number) => {
+  const editMessage = (title: string, id: number, size:number) => {
     messages.map((mess) => {
       if (mess.id === id) {
         mess.title = title;
+        mess.size = size;
       }
     });
   };

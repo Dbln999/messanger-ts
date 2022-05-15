@@ -6,7 +6,7 @@ type messagesProps = {
   messages: Imessage[];
   addMessage(title: string, size: number): void;
   removeMessage(id: number): void;
-  editMessage(title: string, id: number): void;
+  editMessage(title: string, id: number, size:number): void;
 };
 
 export const MessageField: React.FC<messagesProps> = ({

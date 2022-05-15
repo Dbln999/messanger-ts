@@ -4,12 +4,13 @@ import { Imessage } from "./interface";
 type messProps = {
   mess: Imessage;
   removeMessage(id: number): void;
-  editMessage(title: string, id: number): void;
+  editMessage(title: string, id: number, size:number): void;
 };
 
 export const Message: React.FC<messProps> = ({ mess, ...props }) => {
   const [title, setTitle] = useState<string>(mess.title);
   const [disable, setDisable] = useState<boolean>(true);
+  const [titleLength, setTitleLength] = useState(mess.size);
 
   const editHandler = () => {
     setDisable(!disable);
@@ -17,7 +18,8 @@ export const Message: React.FC<messProps> = ({ mess, ...props }) => {
 
   const messHandler = (event: React.ChangeEvent<HTMLInputElement>) => {
     setTitle(event.target.value);
-    props.editMessage(title, mess.id);
+    setTitleLength(event.target.value.length)
+    props.editMessage(title, mess.id, titleLength);
   };
 
   const className = !disable ? "completed" : "fieldContent";
